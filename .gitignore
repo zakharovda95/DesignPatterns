@@ -78,16 +78,3 @@ _[Ss]cripts
 .idea/
 .vs/
 node_modules/
-
-/Migrations
-
-appsettings.Development.json
-appsettings.Production.json
-
-database-dev.db
-database-dev.db-shm
-database-dev.db-wal
-
-database-prod.db
-database-prod.db-shm
-database-prod.db-wal

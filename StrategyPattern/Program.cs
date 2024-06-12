@@ -1,5 +1,8 @@
-﻿using StrategyPattern.Example1;
+﻿using System;
+using StrategyPattern.Example1;
 using StrategyPattern.Example1.Strategies;
+using StrategyPattern.Example2;
+using StrategyPattern.Example2.Strategies;
 
 namespace StrategyPattern
 {
@@ -32,7 +35,24 @@ namespace StrategyPattern
             
             airplane.SetFlyStrategy(airFlowsFlyStrategy); // можем поменять стратегию во время выполнения
             airplane.TakeOff();
+            
+            Console.WriteLine("------------ Example 2 ------------");
 
+            var mobHp = 50;
+            var mobExp = 170;
+
+            var pers = new Character();
+            var swordStrategy = new SwordAttackStrategy();
+            pers.SetAttackStrategy(swordStrategy);
+            var damage = pers.Attack();
+            if (mobHp <= damage)
+            {
+                pers.SetExp(mobExp);
+            }
+
+            var fbStrategy = new FireballAttackStrategy();
+            pers.SetAttackStrategy(fbStrategy);
+            pers.Attack();
         }
     }
 }
