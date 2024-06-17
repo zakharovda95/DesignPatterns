@@ -5,11 +5,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{04F1F589-DD3B-4CA6-9DEC-11C1EE655B7F}</ProjectGuid>
+        <ProjectGuid>{82B87E16-9ACE-48FA-9ED0-756473000FAE}</ProjectGuid>
         <OutputType>Exe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>StrategyPattern</RootNamespace>
-        <AssemblyName>StrategyPattern</AssemblyName>
+        <RootNamespace>ObserverPattern</RootNamespace>
+        <AssemblyName>ObserverPattern</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -40,12 +40,13 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Character.cs" />
-        <Compile Include="Interfaces\IAttackStrategy.cs" />
+        <Compile Include="Interfaces\IObservable.cs" />
+        <Compile Include="Interfaces\IObserver.cs" />
+        <Compile Include="NewspaperMagazinePublisher.cs" />
+        <Compile Include="Observers\WhoNeedMagazine.cs" />
+        <Compile Include="Observers\WhoNeedNewspapper.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="Strategies\FireballAttackStrategy.cs" />
-        <Compile Include="Strategies\SwordAttackStrategy.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="README.md" />

@@ -1,14 +1,14 @@
 using System;
 using StrategyPattern.Example2.Interfaces;
 
-namespace StrategyPattern.Example2.Strategies
+namespace StrategyPattern.Strategies
 {
     internal sealed class SwordAttackStrategy : IAttackStrategy
     {
-        public int Attack()
+        public void Attack()
         {
+            // Логика атаки мечем
             Console.WriteLine("Атакуем мечем!");
-            return 200;
         }
     }
 }
