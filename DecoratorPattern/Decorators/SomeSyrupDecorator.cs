@@ -1,19 +1,21 @@
+using DecoratorPattern.Interfaces;
+
 namespace DecoratorPattern.Decorators
 {
     internal class SomeSyrupDecorator : DrinkDecorator
     {
-        public SomeSyrupDecorator(Drink drink, double price, string description) : base(drink, price, description)
+        public SomeSyrupDecorator(IDrink drink, double price, string desc) : base(drink, price, desc)
         {
         }
 
-        internal override string GetDescription()
+        public override string GetDescription()
         {
-            throw new System.NotImplementedException();
+            return _drink.GetDescription() + " + " + _description; // новый функционал
         }
 
-        internal override double GetPrice()
+        public override double GetPrice()
         {
-            throw new System.NotImplementedException();
+            return _drink.GetPrice() + _price; // новый функционал
         }
     }
 }

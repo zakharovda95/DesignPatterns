@@ -1,19 +1,25 @@
+using DecoratorPattern.Interfaces;
+
 namespace DecoratorPattern
 {
-    internal sealed class Cola : Drink
+    internal sealed class Cola : IDrink
     {
-        public Cola(double price, string customDescription) : base(price, customDescription ?? "Кола")
+        private double _price;
+        private string _description;
+        public Cola(double price, string desc)
         {
+            _price = price;
+            _description = desc;
         }
 
-        internal override string GetDescription()
+         public string GetDescription()
         {
-            return Description;
+            return _description; // корневой класс - возвращаем просто описание
         }
 
-        internal override double GetPrice()
+        public double GetPrice()
         {
-            return Price;
+            return _price; // корневой класс - возвращаем просто описание
         }
     }
 }

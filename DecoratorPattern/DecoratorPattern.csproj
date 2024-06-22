@@ -40,16 +40,13 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Coffee.cs" />
         <Compile Include="Cola.cs" />
         <Compile Include="Decorators\DrinkDecorator.cs" />
         <Compile Include="Decorators\IceDecorator.cs" />
-        <Compile Include="Decorators\MilkDecorator.cs" />
         <Compile Include="Decorators\SomeSyrupDecorator.cs" />
-        <Compile Include="Drink.cs" />
+        <Compile Include="Interfaces\IDrink.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="Tea.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="README.md" />

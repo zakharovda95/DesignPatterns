@@ -1,19 +1,21 @@
+using DecoratorPattern.Interfaces;
+
 namespace DecoratorPattern.Decorators
 {
     internal sealed class IceDecorator : DrinkDecorator
     {
-        public IceDecorator(Drink drink, double price, string description) : base(drink, price, description)
+        public IceDecorator(IDrink drink, double price, string desc) : base(drink, price, desc)
         {
         }
 
-        internal override string GetDescription()
+        public override string GetDescription()
         {
-            return Description + " со льдом"; // добавили новый функционал к старому
+            return _drink.GetDescription() + " + " + _description; // добавили новый функционал к старому
         }
 
-        internal override double GetPrice()
+        public override double GetPrice()
         {
-            throw new System.NotImplementedException();
+            return _drink.GetPrice() + _price; // добавили новый функционал к старому
         }
     }
 }
