@@ -1,5 +1,4 @@
-﻿using StrategyPattern.Example2;
-using StrategyPattern.Strategies;
+﻿using StrategyPattern.Strategies;
 
 namespace StrategyPattern
 {

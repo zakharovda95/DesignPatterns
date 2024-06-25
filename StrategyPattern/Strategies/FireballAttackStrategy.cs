@@ -1,5 +1,5 @@
 using System;
-using StrategyPattern.Example2.Interfaces;
+using StrategyPattern.Interfaces;
 
 namespace StrategyPattern.Strategies
 {

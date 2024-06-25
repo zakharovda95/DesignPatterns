@@ -1,4 +1,4 @@
-namespace StrategyPattern.Example2.Interfaces
+namespace StrategyPattern.Interfaces
 {
     public interface IAttackStrategy
     {
