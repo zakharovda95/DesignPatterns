@@ -40,19 +40,29 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="FactoryMethod\Enums\SubscriptionTypeEnum.cs" />
+        <Compile Include="FactoryMethod\Gym.cs" />
+        <Compile Include="FactoryMethod\GymSubscriptions\GymSubscription.cs" />
+        <Compile Include="FactoryMethod\GymSubscriptions\MoscowSubscriptions\ClassicSubscriptionMoscow.cs" />
+        <Compile Include="FactoryMethod\GymSubscriptions\MoscowSubscriptions\ExtraSubscriptionMoscow.cs" />
+        <Compile Include="FactoryMethod\GymSubscriptions\MoscowSubscriptions\PremiumSubscriptionMoscow.cs" />
+        <Compile Include="FactoryMethod\GymSubscriptions\SpbSubscriptions\ClassicSubscriptionSbp.cs" />
+        <Compile Include="FactoryMethod\GymSubscriptions\SpbSubscriptions\ExtraSubscriptionSbp.cs" />
+        <Compile Include="FactoryMethod\GymSubscriptions\SpbSubscriptions\PremiumSubscriptionSbp.cs" />
+        <Compile Include="FactoryMethod\MoscowGym.cs" />
+        <Compile Include="FactoryMethod\SpbGym.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="SimpleFactory\Enums\PizzaTypeEnum.cs" />
         <Compile Include="SimpleFactory\Interfaces\ISimplePizzaFactory.cs" />
+        <Compile Include="SimpleFactory\Interfaces\IPizza.cs" />
         <Compile Include="SimpleFactory\Pizza\CheesePizza.cs" />
         <Compile Include="SimpleFactory\Pizza\Marinara.cs" />
         <Compile Include="SimpleFactory\Pizza\Pepperoni.cs" />
-        <Compile Include="SimpleFactory\Pizza\Pizza.cs" />
         <Compile Include="SimpleFactory\SimplePizzaFactory.cs" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="AbstractFactory\" />
-      <Folder Include="FactoryMethod\Interfaces\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

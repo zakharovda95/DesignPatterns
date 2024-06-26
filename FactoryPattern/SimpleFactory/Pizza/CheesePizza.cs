@@ -1,7 +1,15 @@
+using System;
+using FactoryPattern.SimpleFactory.Interfaces;
+
 namespace FactoryPattern.SimpleFactory.Pizza
 {
-    public sealed class CheesePizza : Pizza
+    public sealed class CheesePizza : IPizza
     {
-        public CheesePizza(string name) : base(name) {}
+        public string Name { get; set; } = "Сырная пицца";
+
+        public void Cook()
+        {
+            Console.WriteLine($"Готовим пиццу: {Name}");
+        }
     }
 }

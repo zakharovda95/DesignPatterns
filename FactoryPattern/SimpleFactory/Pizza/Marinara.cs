@@ -1,7 +1,14 @@
+using System;
+using FactoryPattern.SimpleFactory.Interfaces;
+
 namespace FactoryPattern.SimpleFactory.Pizza
 {
-    public sealed class Marinara : Pizza
+    public sealed class Marinara : IPizza
     {
-        public Marinara(string name) : base(name) {}
+        public string Name { get; set; } = "Маринара";
+        public void Cook()
+        {
+            Console.WriteLine($"Готовим пиццу: {Name}");
+        }
     }
 }

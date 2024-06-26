@@ -4,6 +4,6 @@ namespace FactoryPattern.SimpleFactory.Interfaces
 {
     public interface ISimplePizzaFactory
     {
-        Pizza.Pizza CreatePizza(PizzaTypeEnum type);
+        IPizza CreatePizza(PizzaTypeEnum type);
     }
 }

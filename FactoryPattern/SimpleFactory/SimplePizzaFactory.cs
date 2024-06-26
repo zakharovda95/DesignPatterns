@@ -6,16 +6,16 @@ namespace FactoryPattern.SimpleFactory
 {
     public class SimplePizzaFactory : ISimplePizzaFactory
     {
-        public Pizza.Pizza CreatePizza(PizzaTypeEnum type)
+        public IPizza CreatePizza(PizzaTypeEnum type)
         {
             switch (type)
             {
                 case PizzaTypeEnum.Cheese:
-                    return new CheesePizza("Сырная пицца");
+                    return new CheesePizza();
                 case PizzaTypeEnum.Marinara:
-                    return new Marinara("Пицца Маринара");
+                    return new Marinara();
                 case PizzaTypeEnum.Pepperoni:
-                    return new Pepperoni("Пепперони");
+                    return new Pepperoni();
                 default: return null;
             }
         }
